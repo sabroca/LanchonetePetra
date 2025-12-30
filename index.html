@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lanchonete Petra</title>
+  <meta name="description" content="Lanchonete Petra — lanches, porções e bebidas com aquele sabor de casa. Monte seu pedido e finalize no WhatsApp!" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <header class="header" id="inicio">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Ir para início">
+        <img src="assets/img/logo.png" alt="Logo Lanchonete Petra" class="brand__logo" />
+        <div class="brand__text">
+          <span class="brand__title">LANCHONETE</span>
+          <span class="brand__name">PETRA</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="#inicio" class="nav__link">Início</a>
+        <a href="#cardapio" class="nav__link">Cardápio</a>
+        <a href="#favoritos" class="nav__link">Favoritos</a>
+        <a href="#contato" class="nav__link">Contato</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="badge">A MELHOR DA REGIÃO</span>
+          <h1>Lanchonete Petra</h1>
+          <p class="lead">
+            Lanches caprichados, porções generosas e bebidas geladinhas tudo feito com carinho.
+            Monte seu pedido no carrinho e finalize em segundos pelo WhatsApp.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--outline" href="#cardapio">Ver Cardápio</a>
+            <a class="btn btn--primary" id="btn-whatsapp-hero" target="_blank" rel="noopener">Falar com a loja pelo WhatsApp</a>
+          </div>
+    </section>
+
+    <section class="menu" id="cardapio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cardápio</h2>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Filtros do cardápio">
+          <button class="chip is-active" data-filter="tudo" role="tab">Tudo</button>
+          <button class="chip" data-filter="favoritos" role="tab">Favoritos</button>
+          <button class="chip" data-filter="combos" role="tab">Combos</button>
+          <button class="chip" data-filter="lanches" role="tab">Lanches</button>
+          <button class="chip" data-filter="porções" role="tab">Porções</button>
+          <button class="chip" data-filter="bebidas" role="tab">Bebidas</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="cta" id="favoritos">
+      <div class="container cta__inner">
+        <div>
+          <h2>Pronto para pedir?</h2>
+          <p>Adicione seus pedidos no carrinho e finalize. Ele vai automaticamente para o nosso WhatsApp.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="#cardapio">Ver Favoritos</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__card">
+          <h2>Contato</h2>
+          <p>Fale com a gente e acompanhe promoções.</p>
+
+          <div class="contact__list">
+            <div class="contact__item">
+              <span class="contact__icon">📍</span>
+              <div>
+                <strong>Endereço</strong>
+                <p>Rua Exemplo, 123 — Bairro Centro</p>
+              </div>
+            </div>
+
+            <div class="contact__item">
+              <span class="contact__icon">🕒</span>
+              <div>
+                <strong>Horário</strong>
+                <p>Qua–Sex: 18h às 23h • Sáb–Dom: 17h às 00h</p>
+              </div>
+            </div>
+
+            <div class="contact__item">
+              <span class="contact__icon">💬</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <p>(11) 99999-9999</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn--primary btn--lg" id="btn-whatsapp-contact" target="_blank" rel="noopener">
+            Falar com a loja pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="contact__card contact__card--highlight">
+          <div class="tip">
+            <span>🛒</span>
+            <p>Adicione itens no carrinho e finalize no WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="Lanchonete Petra" />
+        <div>
+          <strong>Lanchonete Petra</strong>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <small class="footer__copy">
+        © <span id="year"></span> Lanchonete Petra — Desenvolvido por
+        <a href="https://sabroca.github.io/SabrinaPortifolio/" target="_blank" rel="noopener">Sabrina Amorim</a>.
+      </small>
+    </div>
+  </footer>
+
+  <button class="cart-fab" id="cartBtn" aria-label="Abrir carrinho">
+    <span class="cart-fab__icon">🛒</span>
+    <span class="cart-fab__count" id="cartCount">0</span>
+    <span class="cart-fab__total" id="cartMiniTotal">R$ 0,00</span>
+  </button>
+
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Carrinho">
+      <div class="modal__head">
+        <div class="modal__head-left">
+          <h3>Seu Carrinho</h3>
+          <button class="link-btn" type="button" id="continueShopping">Continuar comprando</button>
+        </div>
+        <button class="icon-btn" id="cartClose" aria-label="Fechar carrinho">✕</button>
+      </div>
+
+      <div class="cart">
+        <div class="cart__items" id="cartItems"></div>
+
+        <div class="cart__summary">
+          <div class="cart__row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">R$ 0,00</strong>
+          </div>
+          <div class="cart__row cart__row--total">
+            <span>Total</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+        </div>
+
+        <form class="checkout" id="checkoutForm">
+          <h4>Finalizar Pedido</h4>
+
+          <div class="checkout__section">
+            <h5>Dados do cliente</h5>
+            <div class="grid-2">
+              <label>Nome <span class="req">*</span>
+                <input type="text" name="customerName" required placeholder="Seu nome" />
+              </label>
+              <label>WhatsApp <span class="req">*</span>
+                <input type="tel" name="customerWhatsapp" required placeholder="(DDD) 9xxxx-xxxx" />
+              </label>
+            </div>
+          </div>
+
+          <div class="checkout__section">
+            <h5>Entrega ou retirada</h5>
+            <div class="delivery">
+              <label class="radio">
+                <input type="radio" name="deliveryType" value="entrega" checked />
+                <span>Entrega da loja</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="deliveryType" value="retirada" />
+                <span>Retirar no balcão</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="checkout__section" id="addressSection">
+            <h5>Endereço para entrega <span class="req">*</span></h5>
+            <div class="grid-2">
+              <label>Rua <span class="req">*</span>
+                <input type="text" name="street" required placeholder="Ex.: Rua ABC" />
+              </label>
+              <label>Número <span class="req">*</span>
+                <input type="text" name="number" required placeholder="Ex.: 123" />
+              </label>
+            </div>
+            <label>Bairro <span class="req">*</span>
+              <input type="text" name="neighborhood" required placeholder="Ex.: Centro" />
+            </label>
+            <label>Complemento
+              <input type="text" name="complement" placeholder="Ex.: Apto 12 (opcional)" />
+            </label>
+          </div>
+
+          <div class="checkout__section">
+            <h5>Forma de pagamento <span class="req">*</span></h5>
+            <label>
+              <select name="paymentMethod" id="paymentMethod" required>
+                <option value="" selected disabled>Selecione…</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
+              </select>
+            </label>
+
+            <div class="grid-2" id="changeRow" style="display:none;">
+              <label>Vai precisar de troco?
+                <input type="text" name="needChange" inputmode="decimal" placeholder="Ex.: vou pagar com 50,00" />
+              </label>
+              <div class="hint">
+                <small>Informe com quanto vai pagar para levarmos o troco.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout__section">
+            <h5>Observações do pedido</h5>
+            <label>
+              <textarea name="notes" rows="3" placeholder="Ex.: sem cebola, maionese à parte..."></textarea>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" id="checkoutBtn">
+            Finalizar no WhatsApp
+          </button>
+
+          <small class="checkout__note">
+            Ao finalizar, você será direcionado para o WhatsApp da loja com o pedido completo.
+          </small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
